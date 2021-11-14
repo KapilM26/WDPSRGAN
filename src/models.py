@@ -115,9 +115,8 @@ class SRGAN(pl.LightningModule):
 
         elif optimizer_idx == 0:
             print("Disc train")
-            real = 0.3 * torch.rand((hr.size(0), 1, 5, 5),
-                                    device=self.device) + 0.7
-            fake = 0.3 * torch.rand((hr.size(0), 1, 5, 5), device=self.device)
+            real = torch.ones((hr.size(0), 1, 5, 5), device=self.device)
+            fake = -1 * torch.ones((hr.size(0), 1, 5, 5), device=self.device)
             # label smoothing, between 0.7-1.0 for real and 0.0 to 1.2 for fake
 
             real_loss = self.adversarial_loss(

@@ -137,7 +137,7 @@ class DiscriminatorTail(nn.Module):
                                                 stride=1, padding=1))
 
     def forward(self, inp: Tensor):
-        return torch.sigmoid(self.main(inp))
+        return self.main(inp)
 
 
 class Discriminator(nn.Module):
