@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+autopep8 = "*"
+mypy = "*"
+data-science-types = "*"
+
+[packages]
+torch = "*"
+torchvision = "*"
+numpy = "*"
+pillow = "*"
+pytorch-lightning = "~=0.9.0"
+scikit-image = "*"
+
+[requires]
+python_version = "3.8"
